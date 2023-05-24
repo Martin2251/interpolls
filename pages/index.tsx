@@ -65,6 +65,11 @@ const Home: NextPage = () => {
                   alt={notice.name}
                 />
               )}
+              <div className={styles.notice_body}>
+                <p>
+                  {notice.forename} {notice.name}
+                </p>
+              </div>
             </div>
           );
         })}
