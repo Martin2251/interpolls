@@ -69,6 +69,7 @@ const Home: NextPage = () => {
                 <p>
                   {notice.forename} {notice.name}
                 </p>
+                <p>{notice.date_of_birth}</p>
               </div>
             </div>
           );
