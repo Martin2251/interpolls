@@ -3,6 +3,24 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { useEffect, useState } from 'react'
+export interface Notices{
+  forename: string;
+  date_of_birth:string;
+  entity_id:string;
+  nationalities:string[];
+  name:string;
+  _links:   Links;
+}
+
+export interface Links{
+  self:Images;
+  images:Images;
+  thumbnail:Images;
+}
+
+export interface Images{
+  href:string;
+}
 
 const Home: NextPage = () => {
 
@@ -36,7 +54,7 @@ fetchData()
 
       <main>
         <input type="search" placeholder='search' onChange={(e)=>setSearch(e.target.value)}  />
-        {JSON.stringify(notices)}
+        {JSON.stringify(notices[1])}
       </main>
     </div>
   )
